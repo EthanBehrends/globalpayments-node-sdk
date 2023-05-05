@@ -1440,14 +1440,14 @@ export class PorticoConnector extends XmlGateway implements IPaymentGateway {
 }
 
 function elementToJSON (element: Element) {
-  return Object.fromEntries(elementToJSONHelper(element))
+  return Object.fromEntries([elementToJSONHelper(element)])
 }
 function elementToJSONHelper (element: Element): [string, string|any&{}] {
   const elementChildren = element.getchildren();
   if (elementChildren.length) {
     const obj = Object.fromEntries(elementChildren.map(elementToJSONHelper))
-	return [element.tag, obj]
+	  return [element.tag, obj]
   } else {
-	return [element.tag, element.text]
+	  return [element.tag, element.text]
   }
 }

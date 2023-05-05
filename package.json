@@ -1,5 +1,5 @@
 {
-  "name": "globalpayments-api",
+  "name": "@ethanbehrends/globalpayments-api",
   "version": "1.4.8",
   "description": "Global Payments SDK for NodeJS for Heartland and Global Payments eCommerce gateways",
   "author": "Heartland Payment Systems",
